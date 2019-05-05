@@ -5,7 +5,6 @@ COPY . /sources/
 WORKDIR /sources
 
 RUN apk add --virtual=build bash gcc libffi-dev musl-dev openssl-dev make
-RUN pip install pipenv nose
 RUN bash build_scripts/freeze_requirements.sh
 RUN bash build_scripts/run_tests.sh
 RUN bash build_scripts/build_package.sh

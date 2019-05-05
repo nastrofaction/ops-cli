@@ -11,8 +11,6 @@ env:
   - BOTO_CONFIG=/dev/null
 python:
 - '2.7'
-install:
-- pip install pipenv
 script:
 # build
 - bash build_scripts/freeze_requirements.sh
